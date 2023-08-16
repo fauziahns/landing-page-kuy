@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Landing-page.css">
+</head>
+<body>
+<div class="bg-[#FEFEFE]">
+    <!-- navbar -->
+    <div class="navbar bg-white py-[11px] flex items-center justify-around">
+        <div class="left-content text-[#2D71B4] font-[600] flex justify-content-center items-center space-x-[34px]">
+            <img src="./assets/nav-logo.jpeg" alt="logo-kuy" class="w-[162px]">
+            <a href="#">Beranda</a>
+            <a href="#">Cek Paket</a>
+            <a href="#">Cakupan Wilayah</a>
+        </div>
+
+        <div class="right-content ml-2 flex space-x-[34px]">
+            <div class="bg-[#2D71B4] text-white text-[16px] font-[600] rounded-md py-[6px] px-[16px] flex flex-row items-center gap-2">
+                <img src="./assets/i-download.png" alt="download-app-kuy" class="w-[15.702px] h-[15.702px]">
+                <a href="#">
+                    Download Apps
+                </a>
+            </div>
+
+            <a href="#" class="rounded-md text-[#2D71B4] border border-[#2D71B4] items-center py-[6px] px-[16px]">
+                Login
+            </a>
+        </div>
+    </div>
+
+    <!-- hero -->
+    <div class="hero ">
+        <img src="./assets/hero.jpeg" alt="hero-image-kuy" class="relative">
+        <!-- lacak paket -->
+        <div class="flex gap-4 absolute top-[550px] ml-[50px] justify-center">
+            <div class="bg-white rounded-md w-[373px] mb-[15px]">
+                <div class="p-[20px]">
+                    <span class="text-[#2D71B4] font-[600] text-[24px]">Lacak Paket Kuy</span>
+                    <div class="flex flex-col ">
+                        <label for="kodeResi" class="font-[600] my-[10px]">Kode Resi :</label>
+                        <textarea type="text" class="border border-[#606060] rounded-md" placeholder="Masukan Kode Resi, contoh: xxxxxxx , xxxxxxx , xxxxxxx" rows="4" cols="50"></textarea>
+                        <span class="text-[#5F5F5F] font-[500] text-[12px] mb-[25px] mt-2">*Kamu dapat memasukkan kode resi hinga 20 kode</span>
+    
+                        <button class="bg-[#2D71B4] text-white font-[600] text-[18px] py-[12px] px-[100px] rounded-md">Lacak Paket</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- cek ongkir -->
+            <div class="bg-white rounded-md max-w-[750px]">
+                <div class="bg-white rounded-md">
+                    <div class="flex flex-col p-[20px] justify-around">
+                        <span class="text-[#2D71B4] font-[600] text-[24px] mb-[44px]">Cek Ongkir</span>
+                        <div class="flex space-x-[18px]">
+                            <input 
+                                type="text" 
+                                name="berat" 
+                                id="berat" 
+                                class="border border-[#606060] rounded-lg w-[239.031px] h-[50px]" 
+                                placeholder="| 0">
+                                <div class="relative">
+                                    <img src="./assets/i-location.png" alt="icon-location-kuy" class="absolute kota w-[19px]">
+                                    <input 
+                                        type="text" 
+                                        name="kota" 
+                                        id="kota" 
+                                        class="tujuan border border-[#606060] rounded-lg w-[239.031px] h-[50px]" 
+                                        placeholder="Nama Kota">
+                                </div>
+                            <div class="flex flex-col">
+                                <div class="relative">
+                                    <img src="./assets/i-location.png" alt="icon-location-kuy" class="absolute icon w-[19px]">
+                                    <input 
+                                        type="text" 
+                                        name="tujuan" 
+                                        id="tujuan" 
+                                        class="tujuan border border-[#606060] rounded-lg w-[239.031px] h-[50px] mb-[14px]" 
+                                        placeholder="Nama Kota">
+                                    </div>
+                                    <div class="relative">
+                                        <img src="./assets/i-location.png" alt="icon-location-kuy" class="absolute icon w-[19px]">
+                                        <input 
+                                            type="text" 
+                                            name="tujuan" 
+                                            id="tujuan" 
+                                            class="tujuan border border-[#606060] rounded-lg w-[239.031px] h-[50px] mb-[14px]" 
+                                            placeholder="Tambah Tujuan">
+                                        </div>
+                                <span class="text-[#5F5F5F] text-[12px] font-[500] flex justify-end mb-[25px] mt-[5px]">*Cek hingga 3 tujuan sekaligus</span>
+                            </div>
+                        </div>
+                        <button class="bg-[#2D71B4] text-white font-[600] text-[18px] py-[12px] px-[100px] rounded-md">Cek Ongkir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- service/layanan -->
+    <div class="flex mb-[100px] mt-[400px] justify-evenly mx-[30px]">
+        <div class="flex flex-col w-[370px]">
+            <span class="text-[#2D71B4] text-[40px] font-[600]">Layanan Kita</span>
+            <span class="text-[#5F5F5F] text-[17px] font-[400]">KUY reservasi dan kirim paketmu sekarang juga!</span>
+
+            <button class="bg-[#2D71B4] text-white rounded-md py-[12px] mb-[14px] mt-[29px]">Reservasi Sekarang</button>
+            <button class="bg-[#079849] text-white rounded-md py-[12px]">Whatsapp</button> 
+        </div>
+
+        <div class="flex flex-col ml-[48px] gap-4 ml-[40px]">
+            <div class="flex space-x-[40px]">
+
+                <div class="card bg-white flex flex-col max-w-[320px] p-[22px] rounded-md">
+                    <div class="flex flex-row">
+                        <img src="./assets/i-sameday.png" alt="icon-sameday-kuy" class="w-[50px] h-[50px] mr-4">
+                        <span class="text-[#4E4E4E] text-[30px] font-[600] mb-[12px]">Sameday</span>
+                    </div>
+                    <span class="text-[#5F5F5F] text-[16px] font-[400] mb-[12px]">Kirim barang sangat cepat, kirim hari ini sampai hari ini juga !</span>
+                    <span class="text-[#5F5F5F] text-[16px] font-[500]">Mulai dari</span>
+                    <span class="text-[#3375B8] text-[40px] font-[700]">Rp. 10.000</span>
+                </div>
+                <div class="card bg-white flex flex-col max-w-[370px] p-[22px] rounded-md">
+                    <div class="flex flex-row">
+                        <img src="./assets/i-nextday.png" alt="icon-nextday-kuy" class="w-[50px] h-[50px] mr-4">
+                        <span class="text-[#4E4E4E] text-[30px] font-[600] mb-[12px]">Nextday</span>
+                    </div>
+                    <span class="text-[#5F5F5F] text-[16px] font-[400] mb-[12px]">Kirim barang hari ini sampai <br> esok hari</span>
+                    <span class="text-[#5F5F5F] text-[16px] font-[500]">Mulai dari</span>
+                    <span class="text-[#3375B8] text-[40px] font-[700]">Rp. 8.000 <a class="text-[24px] text-[#B83333]">/ 10.000 </a></span>
+                </div>
+                
+            </div>
+
+            <div class="card bg-white flex flex-col max-w-[370px] p-[22px] rounded-md">
+                <div class="flex flex-row">
+                    <img src="./assets/i-medicine.png" alt="icon-medicine-kuy" class="w-[50px] h-[50px] mr-4">
+                    <span class="text-[#4E4E4E] text-[30px] font-[600] mb-[12px]">Medicine</span>
+                </div>
+                <span class="text-[#5F5F5F] text-[16px] font-[400] mb-[12px]">Antar obat dari rumah sakit ke tempat kamu</span>
+                <div class="flex flex-row items-center gap-2">
+                    <span class="text-[#0065C1] text-[20px] font-[600]">Lebih Lanjut</span>
+                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[30px] h-[30px]">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- etalase kuy -->
+    <div class="bg-[#CAFFE9] flex w-[1150px] items-center rounded-md ml-[55px]">
+        <img src="./assets/people2.png" alt="assets-kuy" class="w-[285px] h-[305px]">
+
+        <div class="flex flex-col items-center">
+            <span class="text-[#2D71B4] text-[40px] font-[700]">Kuy Support Produk lokal</span>
+            <span class="text-[18px] text-[#5F5F5F] font-[400] text-center mb-[30px]">Mau produk kamu ditampilkan disini? atau dapat kan benefit lebih dengan join bersama kami</span>
+            <div class="flex">
+                <button class="bg-[#2D71B4] text-white rounded-md text-[18px] font-[600] px-[16px] py-[12px] mr-[8px]">Tampilkan Produk Kamu</button>
+                <div class="flex bg-[#1CAD4E] text-white rounded-md text-[18px] font-[600] px-[16px] py-[12px] gap-2">
+                    <a href="#">Join Mitra</a>
+                    <img src="./assets/i-join-mitra.png" alt="icon-joint-mitra-kuy" class="w-[26.5px] h-[26.5px]">
+                </div>
+            </div>
+        </div>
+
+        <img src="./assets/people1.png" alt="assets-kuy" class="w-[285px] h-[305px]">
+    </div>
+
+    <div class="mb-[100px]">
+        <div class="flex gap-3 items-center justify-center my-[20px]">
+            <a href="" class="text-[#0065C1] text-[20px] font-[600]">Kunjungi Etalase Kuy</a>
+            <img src="./assets/i-arrow.png" alt="arrow-kuy" class="w-[30px]">
+        </div>
+
+        <div class="flex gap-[40px] justify-center">
+            <div class="bg-white max-w-[360px] rounded-md relative">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[360px] mb-[10px]">
+                <div class="px-[10px]">
+                    <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
+                    <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
+                </div>
+                <div class="flex px-[10px] absolute detail">
+                    <a href="" class="text-[#0065C1] text-[16px] font-[600]">Lihat Detail</a>
+                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[24px]">
+                </div>
+            </div>
+
+            <div class="bg-white max-w-[360px] rounded-md relative">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[360px] mb-[10px]">
+                <div class="px-[10px]">
+                    <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
+                    <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
+                </div>
+                <div class="flex px-[10px] absolute detail">
+                    <a href="" class="text-[#0065C1] text-[16px] font-[600]">Lihat Detail</a>
+                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[24px]">
+                </div>
+            </div>
+
+            <div class="bg-white max-w-[360px] rounded-md relative">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[360px] mb-[10px]">
+                <div class="px-[10px]">
+                    <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
+                    <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
+                </div>
+                <div class="flex px-[10px] absolute detail">
+                    <a href="" class="text-[#0065C1] text-[16px] font-[600]">Lihat Detail</a>
+                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[24px]">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- berita dan promo -->
+    <div class="flex justify-around gap-[650px] mb-[30px]">
+        <div class="flex flex-col ml-[10px]">
+            <span class="text-[#0065C1] text-[40px] font-[600]">Berita & Promo</span>
+            <p class="text-[#5F5F5F] text-[18px] font-[400]">Nantikan update terbaru dari kami</p>
+        </div>
+
+        <p class=" flex items-end text-[#0065C1] text-[20px] font-[600]">Lihat Semua</p>
+    </div>
+
+    <div class="flex justify-center gap-[48px] mb-[100px] ">
+        <div class="">
+            <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="h-[389.395px]">
+            <p class="text-[#5F5F5F] text-[16px] py-[10px]">12 Desember 2023</p>
+            <p class="text-[#4E4E4E] text-[30px] font-[600] mb-[17.2px]">CikutraOlshop</p>
+            <p class="text-[#5F5F5F] font-[400] text-[18px] max-w-[584px]">Macam macam kaos polos dewasa , bikin style kmau makin kece beuuddd</p>
+        </div>
+
+        <div class="flex flex-col gap-[32px]">
+            <div class="flex">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
+                <div class="flex flex-col ml-[16px]">
+                    <p class="text-[#5F5F5F] text-[16px]">12 Desember 2023</p>
+                    <p class="text-[#4E4E4E] text-[30px] font-[600] my-2">CikutraOlshop</p>
+                    <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[18px]">Macam macam kaos polos dewasa , bikin style ...</p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
+                <div class="flex flex-col ml-[16px]">
+                    <p class="text-[#5F5F5F] text-[16px]">12 Desember 2023</p>
+                    <p class="text-[#4E4E4E] text-[30px] font-[600] my-2">CikutraOlshop</p>
+                    <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[18px]">Macam macam kaos polos dewasa , bikin style ...</p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
+                <div class="flex flex-col ml-[16px]">
+                    <p class="text-[#5F5F5F] text-[16px]">12 Desember 2023</p>
+                    <p class="text-[#4E4E4E] text-[30px] font-[600] my-2">CikutraOlshop</p>
+                    <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[18px]">Macam macam kaos polos dewasa , bikin style ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tiket bus and travel -->
+    <div class="flex gap-[40px] mb-[100px] justify-center">
+        <div class="flex flex-col">
+            <p class="text-[#0065C1] text-[40px] font-[600]">Cari Tiket Bus & Travel?</p>
+            <p class="max-w-[563px] text-[#5F5F5F] font-[400] text-[18px] mb-[26px]">Ada banyak pilihan shuttle/travel terbaik dengan rute terlengkap untuk teman perjalanan kamu</p>
+            <button class="bg-[#2D71B4] text-white rounded-md text-[18px] font-[600] px-[16px] py-[12px] mr-[8px] max-w-[207px]">Kunjungi Sekarang</button>
+        </div>
+
+        <div class="">
+            <img src="./assets/diskon.jpeg" alt="diskon-kuy" class="max-w-[583.5px] rounded-md">
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-[#E2F7FC] flex justify-evenly pt-[65px] gap-[60px] pb-[100px]">
+        <div class="flex flex-col">
+            <img src="./assets/logo-footer.png" alt="logo-kuy" class="max-w-[285px]">
+            <p class="text-black text-[18px] font-[600] mt-[20px]">Download aplikasinya di</p>
+        </div>
+        
+        <div class="flex flex-col gap-[10px]">
+            <p class="text-black text-[18px] font-[600] pb-[10px]">Lainnya</p>
+            <a href="">Syarat dan Ketentuan</a>
+            <a href="">Pusat Bantuan</a>
+            <a href="">FAQ</a>
+        </div>
+
+        <div class="flex flex-col">
+            <p class="text-black text-[18px] font-[600] pb-[20px]">Informasi Kontak</p>
+            <div class="flex">
+                <img src="./assets/i-whatsapp.png" alt="icon-whatsapp-kuy" class="w-[23.894px] mr-[10px]">
+                <span>0818-0400-4058</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <p class="text-black text-[18px] font-[600] pb-[20px]">Sosial Media</p>
+            <div class="flex gap-[4px]">
+                <a href="">
+                    <img src="./assets/i-instagram.png" alt="icon-instagram-kuy" class="w-[27px]">
+                </a>
+                <a href="">
+                    <img src="./assets/i-facebook.png" alt="icon-facebook-kuy" class="w-[27px]">
+                </a>
+                <a href="">
+                    <img src="./assets/i-twitter.png" alt="icon-twitter-kuy" class="w-[27px]">
+                </a>
+                <a href="">
+                    <img src="./assets/i-youtube.png" alt="icon-youtube-kuy" class="w-[27px]">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
