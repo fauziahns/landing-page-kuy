@@ -2,4 +2,9 @@
 
 * {
     font-family: Poppins;
+
+}
+
+.card {
+    box-shadow: -2px 7px 16px 0px rgba(153, 153, 153, 0.10);
 }
