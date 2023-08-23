@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="profile.css">
+    <!-- tailwind element -->
+    <link
+        href=""
+        rel="stylesheet" />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+        <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {    
+                },
+                corePlugins: {
+                preflight: false,
+                },
+            };
+        </script>
+    <title>Profile</title>
+</head>
+<body>
+    <div class=" h-full">
+        <!-- navbar -->
+        <div class="navbar bg-white py-[11px] flex items-center justify-around">
+                <div class="left-content text-[#2D71B4] font-[600] flex justify-content-center items-center space-x-[34px]">
+                    <img src="./assets/nav-logo.jpeg" alt="logo-kuy" class="w-[162px]">
+                    <a href="./Landing-page.html">Beranda</a>
+                    <a href="./Cek-paket.html">Cek Paket</a>
+                    <a href="./Cakupan-wilayah.html">Cakupan Wilayah</a>
+                </div>
+        
+                <div class="right-content ml-2 flex space-x-[34px]">
+                    <div class="bg-[#2D71B4] text-white text-[16px] font-[600] rounded-md py-[6px] px-[16px] flex flex-row items-center">
+                        <img src="./assets/i-download.png" alt="download-app-kuy" class="w-[15.702px] h-[15.702px]">
+                        <a href="#" class="ml-2">
+                            Download Apps
+                        </a>
+                    </div>
+        
+                    <a href="./Login.html" class="rounded-md text-[#2D71B4] border border-[#2D71B4] items-center py-[6px] px-[16px]">
+                    Login
+                    </a>
+                </div>
+        </div>
+
+        <div class="flex h-[252px] justify-center mt-[70px]">
+            <!--Tabs navigation-->
+            <ul
+                class="mr-4 flex list-none flex-col flex-wrap pl-0 bg-white border border-[#E7E7E7] rounded-md p-[20px] mt-3"
+                role="tablist"
+                data-te-nav-ref>
+                <li role="presentation" class="flex-grow ">
+                <a
+                    href="#tabs-home03"
+                    class=" block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-[20px] text-[18px] font-[600] leading-tight text-neutral-500 data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:text-primary-400"
+                    data-te-toggle="pill"
+                    data-te-target="#tabs-home03"
+                    data-te-nav-active
+                    role="tab"
+                    aria-controls="tabs-home03"
+                    aria-selected="true"
+                    >Profile</a
+                >
+                </li>
+
+                <li role="presentation" class="flex-grow ">
+                <a
+                    href="#tabs-profile03"
+                    class=" block border-x-0 border-b-2 border-t-0 border-transparent px-7 text-[18px] pb-[20px] font-[600] leading-tight text-neutral-500 data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:text-primary-400"
+                    data-te-toggle="pill"
+                    data-te-target="#tabs-profile03"
+                    role="tab"
+                    aria-controls="tabs-profile03"
+                    aria-selected="false"
+                    >Pesanan Saya</a
+                >
+                </li>
+
+                <li role="presentation" class="flex-grow ">
+                <a
+                    href="#tabs-messages03"
+                    class=" block border-x-0 border-b-2 border-t-0 border-transparent px-7 text-[18px] font-[600] leading-tight text-neutral-500 data-[te-nav-active]:text-primary  dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:text-primary-400"
+                    data-te-toggle="pill"
+                    data-te-target="#tabs-messages03"
+                    role="tab"
+                    aria-controls="tabs-messages03"
+                    aria-selected="false"
+                    >
+                        <div class="flex flex-col border border-[#E7E7E7] rounded-md p-[10px] data-[te-nav-active]:border-[#2D71B4]">
+                            <p class="text-[#5F5F5F] text-[14px] font-[500]">Kuy Points</p>
+
+                            <div class="flex">
+                                <img src="" alt="">
+                                <p class="text-[#2D71B4] ">10.000</p>
+                            </div>
+                        </div>
+                    </a
+                >
+                </li>
+
+            </ul>
+
+            <!--Tabs content-->
+            <div class="my-2 ml-[30px]">
+                <!-- Profile -->
+                <div
+                    class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block bg-white border border-[#E7E7E7] rounded-lg p-[20px] w-[554px]"
+                    id="tabs-home03"
+                    role="tabpanel"
+                    aria-labelledby="tabs-home-tab03"
+                    data-te-tab-active>
+                    <div class="border border-[#E7E7E7] rounded-lg p-[20px] mb-[50px]">
+                        <p class="text-[30px] font-[600] text-[#2D71B4]">Profile</p>
+                        <div class="flex ">
+                            <div class="flex flex-col mr-[20px] text-[#5F5F5F] text-[14px] font-[500]">
+                                <p class="mb-[10px]">Nama</p>
+                                <p class="mb-[10px]">Tanggal Lahir</p>
+                                <p class="mb-[10px]">Nomor Telepon</p>
+                                <p class="mb-[10px]">Alamat</p>
+                            </div>
+
+                            <div class="flex flex-col font-[500] text-[14px] text-[#000000]">
+                                <p class="mb-[10px]">Kelvin</p>
+                                <p class="mb-[10px]">13 Januari 2030</p>
+                                <p class="mb-[10px]">089650073180</p>
+                                <p class="mb-[10px]">Bandung, Jawa Barat, JL. Pasteur No.23</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="py-[10px] px-[20px] bg-[#FF0F0F] text-white rounded-lg">Keluar</button>
+                    </div>
+                </div>
+
+                <!-- Pesanan saya -->
+                <div
+                    class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block bg-white border border-[#E7E7E7] rounded-lg p-[20px] w-[554px]"
+                    id="tabs-profile03"
+                    role="tabpanel"
+                    aria-labelledby="tabs-profile-tab03">
+
+                    <!-- filter -->
+                    <div class="flex text-[#9B9B9B] text-[15px] font-[600] justify-center">
+                        <p class="border border-[#E7E7E7] px-[10px] rounded-md mr-[10px] active:text-[#2D71B4] active:border-[#2D71B4]">Semua</p>
+                        <p class="border border-[#E7E7E7] px-[10px] rounded-md mr-[10px]">Belum Bayar</p>
+                        <p class="border border-[#E7E7E7] px-[10px] rounded-md mr-[10px]">Menunggu Konfirmasi</p>
+                        <p class="border border-[#E7E7E7] px-[10px] rounded-md mr-[10px]">Selesai</p>
+                    </div>
+
+                    <!-- card -->
+                    <div class="flex [20px]">
+                        <div class="flex flex-col px-[20px] border border-[#E7E7E7] ml-[10px] p-[20px] rounded-lg mt-[20px]">
+                            <p class="text-[#2D71B4] text-[24px] font-[600] mb-[20px]">14 Juli 2023</p>
+                            <div class="flex mb-[10px]">
+                                <div class="mr-[30px]">
+                                    <p class="text-[#5F5F5F] text-[16px] font-[500]">Pengirim</p>
+                                    <p class="text-[#2D71B4] text-[20px] font-[600]">J26 NUSANTARA APPAREL</p>
+                                </div>
+    
+                                <div class="">
+                                    <p class="text-[#5F5F5F] text-[16px] font-[500]">Tracking Paket</p>
+                                    <p class="text-[#2D71B4] text-[20px] font-[600]">R230129346597</p>
+                                </div>
+                            </div>
+    
+                            <div class="flex">
+                                <div class="mr-[30px]">
+                                    <p class="text-[#5F5F5F] text-[16px] font-[500]">Penerima</p>
+                                    <p class="text-[#2D71B4] text-[20px] font-[600]">Syarif Hamzah</p>
+                                    <p class="text-[#5F5F5F] text-[12px] font-[500] w-[257px]">PERUMAHAN MANGGA 100 RUMAH B JL.MANGGA NO.100 </p>
+                                </div>
+    
+                                <div class="">
+                                    <p class="text-[#5F5F5F] text-[16px] font-[500]">Jenis Layanan</p>
+                                    <p class="text-[#2D71B4] text-[20px] font-[600]">Sameday</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Points -->
+                <div
+                    class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block bg-white border border-[#E7E7E7] rounded-lg p-[20px] w-[554px]"
+                    id="tabs-messages03"
+                    role="tabpanel"
+                    aria-labelledby="tabs-profile-tab03">
+                    <div class="">
+                        <p class="text-[#2D71B4] text-[30px] font-[600] pb-[10px]">Riwayat Point</p>
+
+                        <div class="flex flex-col">
+                            <div class="flex rounded-lg border border-[#E7E7E7] py-[10px] px-[20px] justify-between">
+                                <img src="" alt="">
+
+                                <div class="flex flex-col">
+                                    <p class="text-[#000000] font-[500]">Isi Coin</p>
+                                    <p class="text-[#707070] text-[14px] font-[500]">Transfer Bank</p>
+                                    <p class="text-[#707070] text-[14px] font-[500]">01 Jan 2023</p>
+                                </div>
+
+                                <div class="justify-end">
+                                    <p class="text-[#0C3AAE] text-[16px] font-[600]">+100.000</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+</body>
+</html>
