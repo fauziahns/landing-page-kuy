@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Tailwind elements -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+            rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+            <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+            <script>
+                tailwind.config = {
+                    darkMode: "class",
+                    theme: {
+                    },
+                    corePlugins: {
+                    preflight: false,
+                    },
+                };
+            </script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -61,7 +79,7 @@
     <div class="p-[30px] mt-[20px] text-[14px] font-[600] flex justify-center rounded-md">
         <div class="flex flex-col justify-center bg-white p-[30px] rounded-lg">
             <div class="flex mb-[10px]">
-                <img src="../assets/pengiriman/Penerima.png" alt="icon-penerima-kuy">
+                <img src="../assets/pengiriman/Penerima.png" alt="icon-pengirim-kuy" class="w-[36px] h-[36px]">
                 <p class="text-[24px] font-[600] ml-[10px] ">Detail Penerima</p>
             </div>
 
@@ -126,7 +144,12 @@
                             <p class="text-[#5F5F5F] text-[10px] w-[229px]">Pilih ukuran barang yang ingin di kirimkan</p>
                         </div>
 
-                        <button class="w-[66px] border border-[#2D71B4] rounded-3xl mt-[10px] text-[#2D71B4] text-[12px]">Pilih</button>
+                        <button 
+                            type="button"
+                            data-te-toggle="modal"
+                            data-te-target="#modalUkuranBarang"
+                            data-te-ripple-init
+                            class="w-[66px] border border-[#2D71B4] rounded-3xl mt-[10px] text-[#2D71B4] text-[12px]">Pilih</button>
                     </div>
 
                     <div class="flex flex-col justify-end">
@@ -149,7 +172,12 @@
                             <p class="text-[12px]">Pilih Layanan & Waktu penjemputan</p>
                             <p class="text-[#5F5F5F] text-[10px] w-[229px]">ada beberapa layanan yang dapat sesuai dengan kebutuhan kamu</p>
 
-                            <button class="w-[113px] border border-[#2D71B4] rounded-3xl mt-[10px] text-[#2D71B4] text-[12px]">Pilih Layanan</button>
+                            <button 
+                                type="button"
+                                data-te-toggle="modal"
+                                data-te-target="#modalLayanan"
+                                data-te-ripple-init
+                                class="w-[113px] border border-[#2D71B4] rounded-3xl mt-[10px] text-[#2D71B4] text-[12px]">Pilih Layanan</button>
                         </div>
 
                         <div class="flex flex-col justify-end">
@@ -169,7 +197,12 @@
                         <p class="text-[12px]">Perlindungan ekstra</p>
                         <p class="text-[#5F5F5F] text-[10px] w-[229px]">Perlindungna lebih untuk mengamankan paket kamu</p>
 
-                        <button class="w-[66px] border border-[#2D71B4] rounded-3xl mt-[10px] text-[#2D71B4] text-[12px]">Pilih</button>
+                        <button 
+                            type="button"
+                            data-te-toggle="modal"
+                            data-te-target="#modalPerlindungan"
+                            data-te-ripple-init    
+                            class="w-[66px] border border-[#2D71B4] rounded-3xl mt-[10px] text-[#2D71B4] text-[12px]">Pilih</button>
                     </div>
 
                     <div class="flex flex-col justify-end">
@@ -178,11 +211,7 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="flex border border-[#2D71B4] rounded-lg p-[10px] justify-center mt-[50px] items-center">
-                <img src="../assets/pengiriman/plus.png" alt="icon-plus-kuy" class="mr-[10px]">
-                <p>Tambah Penerima</p>
-            </div>
+
             <div class="flex justify-end mt-[60px]">
                 <a href="./konfirmasi-pesanan.html">
                     <button class="bg-[#EEEEEE] p-[10px] w-[122px] rounded-lg font-[600]">Lanjut</button>
@@ -191,5 +220,371 @@
         </div>
     </div>
 </div>
+
+<!-- Modal pilih ukuran barang -->
+    <div
+        data-te-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="modalUkuranBarang"
+        tabindex="-1"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-modal="true"
+        role="dialog">
+        <div
+        data-te-modal-dialog-ref
+        class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px]">
+        <div
+          class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+            <div
+                class="justify-center flex-shrink-0 items-center rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                <!--Modal title-->
+                <h5
+                    class="text-[24px] font-[600] text-center"
+                    id="exampleModalScrollableLabel">
+                Pilih Ukuran Barang
+                </h5>
+            </div>
+    
+           <!--Modal body-->
+           <div class="relative p-4 flex flex-col justify-center items-center">
+                    <div class="flex">
+                        <div class="flex text-[12px] w-[338.5px] border border-[#2D71B4] rounded-lg p-[12px] mr-[20px]">
+                            <input type="radio" name="" id="">
+                            <div class="flex flex-col ml-[10px]">
+                                <p>S</p>
+                                <p>60 x 60 CM</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex text-[12px] w-[338.5px] border border-[#2D71B4] rounded-lg p-[12px]">
+                            <input type="radio" name="" id="">
+                            <div class="flex flex-col ml-[10px]">
+                                <p>S</p>
+                                <p>60 x 60 CM</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="flex mt-4">
+                        <div class="flex text-[12px] w-[338.5px] border border-[#2D71B4] rounded-lg p-[12px] mr-[20px]">
+                            <input type="radio" name="" id="">
+                            <div class="flex flex-col ml-[10px]">
+                                <p>S</p>
+                                <p>60 x 60 CM</p>
+                            </div>
+                        </div>
+    
+                        <div class="flex text-[12px] w-[338.5px] border border-[#2D71B4] rounded-lg p-[12px]">
+                            <input type="radio" name="" id="">
+                            <div class="flex flex-col ml-[10px]">
+                                <p>S</p>
+                                <p>60 x 60 CM</p>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+    
+                <!--Modal footer-->
+                <div
+                    class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md py-4 mr-12">
+                    <button
+                        type="button"
+                        class="inline-block rounded bg-[#2D71B4] px-6 pb-2 pt-2.5 text-[12px] text-white"
+                        data-te-modal-dismiss
+                        data-te-ripple-init
+                        data-te-ripple-color="light">
+                    Lanjut
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
+<!-- Modal Perlindungan Ekstra -->
+<div
+    data-te-modal-init
+    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    id="modalPerlindungan"
+    tabindex="-1"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-modal="true"
+    role="dialog">
+    <div
+    data-te-modal-dialog-ref
+    class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px]">
+    <div
+    class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+        <div
+            class="justify-center flex-shrink-0 items-center rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+            <!--Modal title-->
+            <h5
+                class="text-[24px] font-[600] text-center"
+                id="exampleModalScrollableLabel">
+            Pilih Layanan
+            </h5>
+        </div>
+
+    <!--Modal body-->
+    <div class="relative p-4 flex flex-col justify-center items-center mb-[200px]">
+        <div class="flex">
+            <div class="flex border border-[#E7E7E7] rounded-lg  items-start mr-[20px]">
+                <div class="flex py-[10px] px-[16px]">
+                    <input type="checkbox" name="pecah" id="pecah" class="mt-2 w-[20.25px] h-[20.25px]">
+                    <div class="flex flex-col ml-2 w-[198px] ">
+                        <p class="text-[14px] font-[600] text-[#000000]">Barang mudah pecah</p>
+                        <p class="text-[10px] text-[#5F5F5F]">selama perjalanan barang akan di simpat di tempat yang aman sehingga barang tidak akan pecah</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="../assets//pengiriman/pecah.png" alt="icon-lampu-kuy" class="h-[93.991px] w-[77px] top-0">
+                </div>
+            </div>
+
+            <div class="flex border border-[#E7E7E7] rounded-lg  items-start">
+                <div class="flex py-[10px] px-[16px]">
+                    <input type="checkbox" name="pecah" id="pecah" class="mt-2 w-[20.25px] h-[20.25px]">
+                    <div class="flex flex-col ml-2 w-[198px] ">
+                        <p class="text-[14px] font-[600] text-[#000000]">Jangan di tumpuk</p>
+                        <p class="text-[10px] text-[#5F5F5F]">selama perjalanan barang akan di simpat di tempat terpisah sehingga barang tidak akan di tumpuk</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="../assets//pengiriman/tumpuk.png" alt="icon-lampu-kuy" class="h-[93.991px] w-[67px] top-0">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex mt-[20px]">
+            <div class="flex border border-[#E7E7E7] rounded-lg  items-start mr-[20px]">
+                <div class="flex py-[10px] px-[16px]">
+                    <input type="checkbox" name="pecah" id="pecah" class="mt-2 w-[20.25px] h-[20.25px]">
+                    <div class="flex flex-col ml-2 w-[198px] ">
+                        <p class="text-[14px] font-[600] text-[#000000]">Jangan di balik</p>
+                        <p class="text-[10px] text-[#5F5F5F]">selama perjalanan barang akan di simpat di tempat yang aman sehingga barang tidak akan pecah</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="../assets//pengiriman/balik.png" alt="icon-lampu-kuy" class="h-[93.991px] w-[67px] top-0">
+                </div>
+            </div>
+
+            <div class="flex border border-[#E7E7E7] rounded-lg  items-start">
+                <div class="flex py-[10px] px-[16px]">
+                    <input type="checkbox" name="pecah" id="pecah" class="mt-2 w-[20.25px] h-[20.25px]">
+                    <div class="flex flex-col ml-2 w-[198px] ">
+                        <p class="text-[14px] font-[600] text-[#000000]">Pendingin</p>
+                        <p class="text-[10px] text-[#5F5F5F]">driver akan menyediakan pendingin agar barang akan tetap selalu segar</p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="../assets//pengiriman/pendingin.png" alt="icon-lampu-kuy" class="h-[93.991px] w-[67px] top-0">
+                </div>
+            </div>
+        </div>
+        </div>
+
+            <!--Modal footer-->
+            <div
+                class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md py-4 mr-12">
+                <button
+                    type="button"
+                    class="inline-block rounded bg-[#2D71B4] px-6 pb-2 pt-2.5 text-[12px] text-white"
+                    data-te-modal-dismiss
+                    data-te-ripple-init
+                    data-te-ripple-color="light">
+                Lanjut
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Modal Pilih Layanan -->
+<div
+    data-te-modal-init
+    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    id="modalLayanan"
+    tabindex="-1"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-modal="true"
+    role="dialog">
+    <div
+    data-te-modal-dialog-ref
+    class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px]">
+    <div
+    class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+        <div
+            class="justify-center flex-shrink-0 items-center rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+            <!--Modal title-->
+            <h5
+                class="text-[24px] font-[600] text-center"
+                id="exampleModalScrollableLabel">
+            Pilih Layanan
+            </h5>
+        </div>
+
+    <!--Modal body-->
+    <div class="relative p-4 flex flex-col justify-center items-center">
+        <div class="flex">
+            <div class="flex text-[12px] w-[338.5px] border border-[#E7E7E7] rounded-lg p-[12px] mr-[20px] items-center hover:border-[#2D71B4]">
+                <input type="radio" name="nextday" id="nextday" class="w-[21px] h-[21px]">
+                <div class="flex flex-col ml-[10px]">
+                    <p class="text-[14px] font-[600] text-[#000000]">Nextday</p>
+                    <p class="text-[12px] text-[#5F5F5F]">Kirim barang hari ini sampai esok hari</p>
+                    <p class="text-[12px] text-[#F96441] font-[500]">*Batas Waktu Pemesanan jam 19:00</p>
+                </div>
+            </div>
+
+            <div class="flex text-[12px] w-[338.5px] border border-[#E7E7E7] rounded-lg p-[12px] items-center hover:border-[#2D71B4]">
+                <input type="radio" name="sameday" id="sameday" class="w-[21px] h-[21px]">
+                <div class="flex flex-col ml-[10px]">
+                    <p class="text-[14px] font-[600] text-[#000000]">Sameday</p>
+                    <p class="text-[12px] text-[#5F5F5F]">Kirim barang sangat cepat, kirim hari ini sampai hari ini juga !</p>
+                    <p class="text-[12px] text-[#F96441] font-[500]">*Batas Waktu Pemesanan jam 19:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-[50px] flex flex-col">
+            <p class="text-[24px] font-[600] text-[#000000] text-center">Pilih hari dan waktu pengiriman</p>
+            <hr class="bg-[#D6D6D6] h-[2px] w-[692px]">
+
+            <div class="flex">
+                <!-- Hari -->
+                <div class="flex flex-col w-[317px]">
+                    <p class="text-center pt-[20px] pb-[10px] text-[24px] font-[600] text-[#000000]">Hari</p>
+                    <div class="flex">
+                        <div class="flex flex-col mr-[20px]">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>Hari ini</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>Besok</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-[20px]">
+                        <div class="flex flex-col mr-[20px]">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>Jum, 13 Jul</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>Sab, 14 Jul</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#D6D6D6] w-[1px] h-[160px] mx-[32px] mt-[20px]"></div>
+
+                <!-- Waktu -->
+                <div class="flex flex-col w-[317px] overflow-auto">
+                    <p class="text-center pt-[20px] pb-[10px] text-[24px] font-[600] text-[#000000]">Waktu</p>
+                    <div class="flex">
+                        <div class="flex flex-col mr-[20px]">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>Sekarang</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>08.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-[20px]">
+                        <div class="flex flex-col mr-[20px]">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>09.00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>10.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-[20px]">
+                        <div class="flex flex-col mr-[20px]">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>11.00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>12.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-[20px]">
+                        <div class="flex flex-col mr-[20px]">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>13.00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>14.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-[20px]">
+                        <div class="flex flex-col mr-[20px]">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>15.00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <div class="flex border border-[#E7E7E7] p-[10px] rounded-lg w-[148.5px] justify-center text-black font-[500]">
+                                <p>16.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+            <!--Modal footer-->
+            <div
+                class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md py-4 mr-12">
+                <button
+                    type="button"
+                    class="inline-block rounded bg-[#2D71B4] px-6 pb-2 pt-2.5 text-[12px] text-white"
+                    data-te-modal-dismiss
+                    data-te-ripple-init
+                    data-te-ripple-color="light">
+                Lanjut
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- tailwind elements -->
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </body>
 </html>
