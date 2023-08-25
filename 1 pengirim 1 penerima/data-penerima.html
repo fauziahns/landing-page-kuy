@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+     <!-- Tailwind elements -->
+     <link
+     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+     rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+        <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                },
+                corePlugins: {
+                preflight: false,
+                },
+            };
+        </script>
     <title>Document</title>
 </head>
 <body>
@@ -86,20 +104,33 @@
                 <div class="flex flex-col w-[343px]">
                     <div class="flex justify-between">
                         <label for="alamatPenerima">Alamat</label>
-                        <a href=""><p class="text-[#2D71B4] text-[12px] font-[500]">Alamat Tersimpan</p></a>
+                        <a  
+                            class="cursor-pointer"
+                            type="button"
+                            data-te-toggle="modal"
+                            data-te-target="#modalAlamatTersimpan"
+                            data-te-ripple-init >
+                            <p class="text-[#2D71B4] text-[12px] font-[500]">Alamat Tersimpan</p>
+                        </a>
                     </div>
                     <input type="text" name="alamatPenerima" id="alamatPenerima" class="h-[66px] border border-[#E7E7E7] rounded-md mt-2 px-[10px] py-[5px] " placeholder="Nama Kota, Jalan">
                 </div>
                 <div class="flex flex-col w-[343px] ml-[20px]">
-                    <label for="namaPenerima">Nama Penerima</label>
-                    <input type="text" name="namaPenerima" id="namaPenerima" placeholder="08xxxxx" class="border border-[#E7E7E7] rounded-md px-[10px] py-[5px] mt-2">
+                    <label for="namaPenerima">Patokan</label>
+                    <input type="text" name="patokan" id="patokan" placeholder="Opsional" class="border border-[#E7E7E7] rounded-md px-[10px] py-[5px] mt-2">
                 </div>
             </div>
 
             <div class="border border-[#E7E7E7] rounded-md mt-[20px] h-[97px] flex justify-center w-[343px]">
                 <a href="" class="flex justify-center items-center">
                     <img src="../assets/pengiriman/location.png" alt="icon-location-kuy">
-                    <p class="ml-[10px]">Pilih Titik Pengiriman</p>
+                    <a 
+                            class="items-center justify-center flex cursor-pointer"
+                            type="button"
+                            data-te-toggle="modal"
+                            data-te-target="#modalTitikPengiriman"
+                            data-te-ripple-init>
+                        <p class="ml-[10px]">Pilih Titik Pengiriman</p>
                 </a>
             </div>
 
@@ -111,5 +142,134 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Pilih Titik Pengiriman -->
+    <div
+        data-te-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="modalTitikPengiriman"
+        tabindex="-1"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-modal="true"
+        role="dialog">
+        <div
+            data-te-modal-dialog-ref
+            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px]">
+        <div
+            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                <div
+                    class="justify-center flex-shrink-0 items-center rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                    <!--Modal title-->
+                    <h5
+                        class="text-[24px] font-[600] text-center"
+                        id="exampleModalScrollableLabel">
+                    Pilih Titik Pengiriman
+                    </h5>
+                </div>
+    
+                <!--Modal body-->
+                <div class="relative p-4 flex flex-col justify-center items-center">
+                    <div class="flex flex-col">
+                        <div class="maps">
+                            <p class="border border-[#E7E7E7] rounded-lg w-[672px] h-[271px]">maps</p>
+                        </div>
+    
+                        <div class="searchbar">
+                            <input type="text" placeholder="Cari Lokasi Patokan Pickup Penerima" class="border border-[#E3E3E3] rounded-lg w-[672px] placeholder:p-[10px] mt-[14px] mb-[10px] placeholder:text-[14px]">
+                        </div>
+    
+                        <div class="card border border-[#E7E7E7] rounded-lg w-[672px] py-[10px] px-[16px] mb-[10px]">
+                            <p class="text-[#000000] font-[600] text-[14px]">Jl. Purbasari No.19</p>
+                            <p class="text-[#676767] text-[12px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+    
+                        <div class="card border border-[#E7E7E7] rounded-lg w-[672px] py-[10px] px-[16px] mb-[10px]">
+                            <p class="text-[#000000] font-[600] text-[14px]">Jl. Purbasari No.19</p>
+                            <p class="text-[#676767] text-[12px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+    
+                        <div class="card border border-[#E7E7E7] rounded-lg w-[672px] py-[10px] px-[16px] mb-[10px]">
+                            <p class="text-[#000000] font-[600] text-[14px]">Jl. Purbasari No.19</p>
+                            <p class="text-[#676767] text-[12px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+    
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- Modal Alamat Tersimpan -->
+    <div
+        data-te-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="modalAlamatTersimpan"
+        tabindex="-1"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-modal="true"
+        role="dialog">
+        <div
+            data-te-modal-dialog-ref
+            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px]">
+        <div
+            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                <div
+                    class="justify-center flex-shrink-0 items-center rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                    <!--Modal title-->
+                    <h5
+                        class="text-[24px] font-[600] text-center"
+                        id="exampleModalScrollableLabel">
+                    Alamat Tersimpan
+                    </h5>
+                </div>
+    
+                <!--Modal body-->
+                <div class="relative p-4 flex flex-col justify-center items-center">
+                    <div class="flex mb-[10px]">
+                        <div class="border border-[#EAEAEA] rounded-lg mr-[10px] w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+    
+                        <div class="border border-[#EAEAEA] rounded-lg w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+                    </div>
+    
+                    <div class="flex mb-[10px]">
+                        <div class="border border-[#EAEAEA] rounded-lg mr-[10px] w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+    
+                        <div class="border border-[#EAEAEA] rounded-lg w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+                    </div>
+    
+                    <div class="flex mb-[10px]">
+                        <div class="border border-[#EAEAEA] rounded-lg mr-[10px] w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+    
+                        <div class="border border-[#EAEAEA] rounded-lg w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex mb-[10px]">
+                        <div class="border border-[#EAEAEA] rounded-lg mr-[10px] w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+    
+                        <div class="border border-[#EAEAEA] rounded-lg w-[332px]">
+                            <p class="text-[12px] text-[#676767] font-[400] py-[10px] px-[16px]">Jl. Purbasari No.19, Cipageran, Cimahi Utara, Kota Cimahi, Jawa Barat.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    
+<!-- tailwind elements -->
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </body>
 </html>
