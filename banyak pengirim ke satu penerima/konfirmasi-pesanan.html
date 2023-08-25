@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- Tailwind elements -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+        rel="stylesheet" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+        <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                },
+                corePlugins: {
+                preflight: false,
+                },
+            };
+        </script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -83,7 +102,12 @@
 
             <div class=" rounded-lg border border-[#E7E7E7] mx-[30px] my-[20px]">
                 <div class="bg-[#2D71B4] rounded-t-lg px-[30px] py-[10px] ">
-                    <div class="flex bg-white px-[10px] py-[6px] justify-between rounded-lg">
+                    <div 
+                        type="button"
+                        data-te-toggle="modal"
+                        data-te-target="#modalMetodePembayaran"
+                        data-te-ripple-initclass="flex bg-white px-[10px] py-[6px] justify-between rounded-lg"
+                        class="flex bg-white px-[10px] py-[6px] justify-between rounded-lg cursor-pointer">
                         <p>Pilih Metode Pembayaran</p>
                         <div class="flex items-center">
                             <p class="mr-[10px]">Rp. 30.000</p>
@@ -130,6 +154,94 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Pilih Metode Pembayaran -->
+    <div
+        data-te-modal-init
+        class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+        id="modalMetodePembayaran"
+        tabindex="-1"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-modal="true"
+        role="dialog">
+        <div
+            data-te-modal-dialog-ref
+            class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[992px]:max-w-[800px]">
+        <div
+            class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
+                <div
+                    class="justify-center flex-shrink-0 items-center rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                    <!--Modal title-->
+                    <h5
+                        class="text-[24px] font-[600] text-center"
+                        id="exampleModalScrollableLabel">
+                    Pilih Metode Pembayaran
+                    </h5>
+                </div>
+    
+                <!--Modal body-->
+                <div class="relative p-4 flex flex-col justify-center items-center">
+                    <div class="flex">
+                        <div class="flex border border-[#E7E7E7] rounded-lg py-[10px] px-[16px] text-[#000000] text-[14px] font-[600] hover:border-[#2D71B4] w-[312px]  mr-[50px] w-[312px] items-center">
+                            <input type="radio" name="tunai" id="tunai" class="mr-[10px]">
+                            <img src="../assets/pengiriman/tunai.png" alt="" class="mr-[10px] w-[30px] h-[30px]">
+                            <p>Tunai Penerima</p>
+                        </div>
+
+                        <div class="flex border border-[#E7E7E7] rounded-lg py-[10px] px-[16px] text-[#000000] text-[14px] font-[600] hover:border-[#2D71B4] w-[312px] items-center">
+                            <input type="radio" name="gopay" id="gopay" class="mr-[10px]">
+                            <img src="../assets/pengiriman/gpay.png" alt="" class="mr-[10px] w-[30px] h-[30px]">
+                            <p>Gopay</p>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-[30px]">
+                        <div class="flex border border-[#E7E7E7] rounded-lg py-[10px] px-[16px] text-[#000000] text-[14px] font-[600] hover:border-[#2D71B4] w-[312px]  mr-[50px] items-center">
+                            <input type="radio" name="shopeepay" id="shopeepay" class="mr-[10px]">
+                            <img src="../assets/pengiriman/spay.png" alt="" class="mr-[10px] w-[30px] h-[30px]">
+                            <p>Shopeepay</p>
+                        </div>
+
+                        <div class="flex border border-[#E7E7E7] rounded-lg py-[10px] px-[16px] text-[#000000] text-[14px] font-[600] hover:border-[#2D71B4] w-[312px] items-center">
+                            <input type="radio" name="ovo" id="ovo" class="mr-[10px]">
+                            <img src="../assets/pengiriman/ovo.png" alt="" class="mr-[10px] h-[20.25px] w-[30px]">
+                            <p>Ovo</p>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-[30px]">
+                        <div class="flex border border-[#E7E7E7] rounded-lg py-[10px] px-[16px] text-[#000000] text-[14px] font-[600] hover:border-[#2D71B4] w-[312px]  mr-[50px] items-center">
+                            <input type="radio" name="qris" id="qris" class="mr-[10px]">
+                            <img src="../assets/pengiriman/qris.png" alt="" class="mr-[10px] w-[30px] h-[11.1px]">
+                            <p>Qris</p>
+                        </div>
+
+                        <div class="flex  rounded-lg py-[10px] px-[16px] text-[#000000] text-[14px] font-[600] hover:border-[#2D71B4] w-[312px] h-[50px] items-center">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--Modal footer-->
+                <div
+                    class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md py-4 mr-12">
+                    <button
+                        type="button"
+                        class="inline-block rounded bg-[#2D71B4] px-6 pb-2 pt-2.5 text-[12px] text-white"
+                        data-te-modal-dismiss
+                        data-te-ripple-init
+                        data-te-ripple-color="light">
+                    Lanjut
+                    </button>
+                </div>
+            </div>
+            </div>
+            </div>  
+    </div>
+    </div>
 </div>
+
+<!-- tailwind elements -->
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </body>
 </html>
