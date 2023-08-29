@@ -52,17 +52,20 @@
         </div>
 
         <!-- search bar -->
-        <div class="card bg-white mt-[38px] w-[1120px] flex flex-col justify-center lg:ml-[65px] p-[20px] rounded-md">
+        <div class="card bg-white mt-[38px] lg:w-[1120px] flex flex-col justify-center ml-4 lg:ml-[65px] p-[20px] rounded-md w-[343px]">
             <div class="flex flex-col justify-center">
                 <p class="text-[#2D71B4] text-[30px] font-[600]">Lacak Paket Kuy</p>
                 <p class="text-[16px] font-[600] mb-2">Kode Resi :</p>
             </div>
 
             <div class="flex justify-center">
-                <input type="text" name="search" id="search" placeholder="Masukan Kode Resi, contoh: xxxxxxx , xxxxxxx , xxxxxxx" class="w-[720px] rounded-md border border-[#606060] mr-[20px]">
-                <button class="bg-[#2D71B4] text-white py-[12px] px-[118px] rounded-md text-[18px] font-[600]">Cek Paket</button>
+                <input type="text" name="search" id="search" placeholder="Masukan Kode Resi, contoh: xxxxxxx , xxxxxxx , xxxxxxx" class="lg:w-[820px] lg:h-[52px] w-[248px] h-[30px] rounded-md border border-[#606060] mr-[20px] placeholder:p-[6px] placeholder:text-[12px]">
+                <button class="bg-[#2D71B4] text-white py-[12px] rounded-md text-[18px] font-[600] w-[228px] h-[52px] hidden lg:block">Cek Paket</button>
+
+                <!-- mobile -->
+                <button class="bg-[#2D71B4] items-center text-white p-[6px] rounded-md text-[12px] font-[600] w-[65px] h-[30px] lg:hidden">Cari</button>
             </div>
-            <p class="text-[#5F5F5F] text-[12px] font-[500] mt-2">*Kamu dapat memasukkan kode resi hinga 20 kode</p>
+            <p class="text-[#5F5F5F] text-[12px] font-[500] mt-2 hidden lg:block">*Kamu dapat memasukkan kode resi hinga 20 kode</p>
         </div>
         
         <!-- card -->
@@ -70,7 +73,7 @@
             <!-- card1 -->
             <div id="accordionExample">
                 <div
-                class="w-[540px] m-[20px] rounded-t-lg border border-neutral-200 bg-white mt-[48px]">
+                class="lg:w-[540px] w-[343px] m-[20px] rounded-t-lg border border-neutral-200 bg-white mt-[48px]">
                 <h2 class="mb-0" id="headingOne">
                     <button
                     class="group relative flex w-full items-center rounded-t-[15px] bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]" type="button" data-te-collapse-init data-te-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -84,35 +87,35 @@
                 <div
                     id="collapseOne" class="!visible" data-te-collapse-item data-te-collapse-show aria-labelledby="headingOne" data-te-parent="#accordionExample">
                     <div class="px-5 py-4">
-                        <div class="flex bg-white w-[490px] ">
+                        <div class="flex w-[490px] ">
                             <div class="flex flex-col">
         
-                                <div class="flex mb-[10px]">
-                                    <div class="mr-[30px]">
+                                <div class="flex mb-[10px] flex-col lg:flex-row">
+                                    <div class="mr-[30px] mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Pengirim</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">J26 NUSANTARA APPAREL</p>
                                     </div>
         
-                                    <div class="">
+                                    <div class="mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Tracking Paket</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">R230129346597</p>
                                     </div>
                                 </div>
         
-                                <div class="flex">
-                                    <div class="mr-[30px]">
+                                <div class="flex flex-col lg:flex-row">
+                                    <div class="mr-[30px] mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Penerima</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">Syarif Hamzah</p>
                                         <p class="text-[#5F5F5F] text-[12px] font-[500] w-[257px]">PERUMAHAN MANGGA 100 RUMAH B JL.MANGGA NO.100 </p>
                                     </div>
         
-                                    <div class="">
+                                    <div class="mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Jenis Layanan</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">Sameday</p>
                                     </div>
                                 </div>
         
-                                <hr class="bg-[#2D71B4] h-[2px] my-[20px] w-[500px]">
+                                <hr class="bg-[#2D71B4] h-[2px] my-[20px] lg:w-[500px] w-[300px]">
                             </div>
                         </div>
 
@@ -120,8 +123,8 @@
                             <div class="flex flex-col">
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -130,14 +133,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Di Terima (Siscko)</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Di Terima (Siscko)</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -146,15 +149,15 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Proses Pengantaran oleh Kurir</p>
-                                        <p class="text-[#5F5F5F] text-[14px] font-[600]">Oleh : Friendly</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Proses Pengantaran oleh Kurir</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px] font-[600]">Oleh : Friendly</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -163,14 +166,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -179,14 +182,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -195,14 +198,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -211,14 +214,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -227,14 +230,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -242,7 +245,7 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
                             </div>
@@ -254,57 +257,58 @@
             <!-- card2 -->
             <div id="accordionExample">
                 <div
-                class="w-[540px] m-[20px] rounded-t-lg border border-neutral-200 bg-white mt-[48px]">
-                <h2 class="mb-0" id="headingTwo">
+                class="lg:w-[540px] w-[343px] m-[20px] rounded-t-lg border border-neutral-200 bg-white mt-[48px]">
+                <h2 class="mb-0" id="headingOne">
                     <button
-                    class="group relative flex w-full items-center rounded-t-[15px] bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]" type="button" data-te-collapse-init data-te-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    class="group relative flex w-full items-center rounded-t-[15px] bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]" type="button" data-te-collapse-init data-te-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <p class="text-[#2D71B4] font-[600] text-[24px]">Detail Paket</p>
                     <span
                         class="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
-                        <img src="./assets/cek-paket/arrow-down.png" alt="">
+                        <img src="./assets/cek-paket/arrow-down.png" alt="icon-arrow-kuy" class="w-[2.25rem]">
                     </span>
                     </button>
                 </h2>
                 <div
-                    id="collapseTwo" class="!visible" data-te-collapse-item data-te-collapse-show aria-labelledby="headingTwo" data-te-parent="#accordionExample">
+                    id="collapseOne" class="!visible" data-te-collapse-item data-te-collapse-show aria-labelledby="headingOne" data-te-parent="#accordionExample">
                     <div class="px-5 py-4">
-                        <div class="flex bg-white w-[490px] ">
+                        <div class="flex w-[490px] ">
                             <div class="flex flex-col">
         
-                                <div class="flex mb-[10px]">
-                                    <div class="mr-[30px]">
+                                <div class="flex mb-[10px] flex-col lg:flex-row">
+                                    <div class="mr-[30px] mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Pengirim</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">J26 NUSANTARA APPAREL</p>
                                     </div>
         
-                                    <div class="">
+                                    <div class="mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Tracking Paket</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">R230129346597</p>
                                     </div>
                                 </div>
         
-                                <div class="flex">
-                                    <div class="mr-[30px]">
+                                <div class="flex flex-col lg:flex-row">
+                                    <div class="mr-[30px] mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Penerima</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">Syarif Hamzah</p>
                                         <p class="text-[#5F5F5F] text-[12px] font-[500] w-[257px]">PERUMAHAN MANGGA 100 RUMAH B JL.MANGGA NO.100 </p>
                                     </div>
         
-                                    <div class="">
+                                    <div class="mt-2">
                                         <p class="text-[#5F5F5F] text-[16px] font-[500]">Jenis Layanan</p>
                                         <p class="text-[#2D71B4] text-[20px] font-[600]">Sameday</p>
                                     </div>
                                 </div>
         
-                                <hr class="bg-[#2D71B4] h-[2px] my-[20px] w-[500px]">
+                                <hr class="bg-[#2D71B4] h-[2px] my-[20px] lg:w-[500px] w-[300px]">
                             </div>
                         </div>
-                                        <!-- tracking paket -->
+
+                            <!-- tracking paket -->
                             <div class="flex flex-col">
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -313,14 +317,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Di Terima (Siscko)</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Di Terima (Siscko)</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -329,15 +333,15 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Proses Pengantaran oleh Kurir</p>
-                                        <p class="text-[#5F5F5F] text-[14px] font-[600]">Oleh : Friendly</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Proses Pengantaran oleh Kurir</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px] font-[600]">Oleh : Friendly</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -346,14 +350,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -362,14 +366,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -378,14 +382,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -394,14 +398,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -410,14 +414,14 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
 
                                 <div class="flex mb-[30px]">
                                     <div class="flex flex-col">
-                                        <p class="text-[#F96441] text-[16px] font-[600]">13 Juni 2023</p>
-                                        <p class="text-[#5F5F5F] text-[14px]">Senin, 12:30</p>
+                                        <p class="text-[#F96441] text-[12px] lg:text-[16px] font-[600]">13 Juni 2023</p>
+                                        <p class="text-[#5F5F5F] text-[10px] lg:text-[14px]">Senin, 12:30</p>
                                     </div>
 
                                     <div class="stepper relative mx-[30px]">
@@ -425,7 +429,7 @@
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <p class="text-[#2D71B4] text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
+                                        <p class="text-[#2D71B4] text-[12px] lg:text-[16px] font-[600]">Paket Transi Outlet Jakarta</p>
                                     </div>
                                 </div>
                             </div>

@@ -10,46 +10,56 @@
     <title>LogIn</title>
 </head>
 <body>
+<div class="bg-[#F7F7F8]">
  <!-- navbar -->
- <div class="navbar bg-white py-[11px] flex items-center justify-around">
-    <div class="left-content text-[#2D71B4] font-[600] flex justify-content-center items-center space-x-[34px]">
-        <img src="./assets/nav-logo.jpeg" alt="logo-kuy" class="w-[162px]">
-        <a href="./Landing-page.html">Beranda</a>
-        <a href="./Cek-paket.html">Cek Paket</a>
-        <a href="./Cakupan-wilayah.html">Cakupan Wilayah</a>
-    </div>
+    <div class="navbar bg-white py-[11px] flex items-center justify-around">
+        <div class="left-content text-[#2D71B4] font-[600] flex justify-content-center items-center space-x-[34px]">
+            <img src="./assets/nav-logo.jpeg" alt="logo-kuy" class="w-[162px]">
+            <a href="./Landing-page.html">Beranda</a>
+            <a href="./Cek-paket.html">Cek Paket</a>
+            <a href="./Cakupan-wilayah.html">Cakupan Wilayah</a>
+        </div>
 
-    <div class="right-content ml-2 flex space-x-[34px]">
-        <div class="bg-[#2D71B4] text-white text-[16px] font-[600] rounded-md py-[6px] px-[16px] flex flex-row items-center gap-2">
-            <img src="./assets/i-download.png" alt="download-app-kuy" class="w-[15.702px] h-[15.702px]">
-            <a href="#">
-                Download Apps
+        <div class="right-content ml-2 flex space-x-[34px]">
+            <div class="bg-[#2D71B4] text-white text-[16px] font-[600] rounded-md py-[6px] px-[16px] flex flex-row items-center gap-2">
+                <img src="./assets/i-download.png" alt="download-app-kuy" class="w-[15.702px] h-[15.702px]">
+                <a href="#">
+                    Download Apps
+                </a>
+            </div>
+
+            <a href="./Login.html" class="rounded-md text-[#2D71B4] border border-[#2D71B4] items-center py-[6px] px-[16px]">
+                Login
             </a>
         </div>
-
-        <a href="./Login.html" class="rounded-md text-[#2D71B4] border border-[#2D71B4] items-center py-[6px] px-[16px]">
-            Login
-        </a>
     </div>
-</div>
 
-<div class="flex">
-    <div class="flex flex-col w-[347px]">
-        <p class="text-[36px] font-[600]">Registrasi</p>
-        <label for="nama">Nama</label>
-        <input type="text" name="nama" id="nama" class="border border-[#ABABAB] rounded-md p-2 w-[355px]" placeholder="Nama Anda">
+    <div class="flex justify-center">
+        <div class="flex flex-col w-[347px] mt-[60px]">
+            <p class="text-[36px] font-[600]">Registrasi</p>
+            <label for="nama" class="mt-[30px]">Nama</label>
+            <input type="text" name="nama" id="nama" class="border border-[#ABABAB] rounded-md p-2 w-[355px] mb-[20px]" placeholder="Nama Anda">
 
-        <label for="ttl">Tanggal Lahir</label>
-        <div class="flex">
-            <input type="text" name="tanggal" id="tanggal" class="border border-[#ABABAB] rounded-md p-2 w-[113px] mr-2" placeholder="Tanggal">
-            <input type="text" name="tanggal" id="tanggal" class="border border-[#ABABAB] rounded-md p-2 w-[113px] mr-2" placeholder="Bulan">
-            <input type="text" name="tanggal" id="tanggal" class="border border-[#ABABAB] rounded-md p-2 w-[113px]" placeholder="Hari">
+            <label for="ttl">Tanggal Lahir</label>
+            <div class="flex mb-[20px]">
+                <input type="text" name="tanggal" id="tanggal" class="border border-[#ABABAB] rounded-md p-2 w-[113px] mr-2" placeholder="Tanggal">
+                <input type="text" name="tanggal" id="tanggal" class="border border-[#ABABAB] rounded-md p-2 w-[113px] mr-2" placeholder="Bulan">
+                <input type="text" name="tanggal" id="tanggal" class="border border-[#ABABAB] rounded-md p-2 w-[113px]" placeholder="Hari">
+            </div>
+
+            <label for="nohp">No Hp</label>
+            <input type="text" name="" id="" class="border border-[#ABABAB] rounded-md p-2 w-[355px] mb-[20px]">
+
+            <label for="alamat">Alamat</label>
+            <textarea type="text" name="alamat" id="alamat" class="border border-[#ABABAB] rounded-md p-2 w-[355px] h-[88px]" placeholder="Nama Jalan"></textarea>
+
+            <div class="flex justify-end mb-[50px]">
+                <a href="./Profile.html">
+                    <button class="bg-[#2D71B4] text-white w-[114px] h-[44px] rounded-lg mt-[30px]">Login</button>
+                </a>
+            </div>
         </div>
-
-        <label for="nohp">No Hp</label>
-        <input type="text" name="" id="">
     </div>
 </div>
-
 </body>
 </html>
