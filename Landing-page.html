@@ -8,7 +8,6 @@
 </head>
 <body>
 <div class="bg-[#F7F7F8]">
-  
     <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-evenly mx-auto p-4">
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -56,13 +55,12 @@
         </div>
     </nav>
 
-
     <div class=" hero flex flex-col justify-center items-center">
-        <img src="./assets/hero.jpeg" alt="hero-image-kuy" class="relative bg-cover" class="w-full">
-        <div class="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row lg:absolute md:absolute xl:absolute 2xl:absolute md:top-[550px] xl:top-[550px] 2xl:top-[550px] lg:top-[550px] lacak">
+        <img src="./assets/hero.jpeg" alt="hero-image-kuy" class="relative bg-cover w-screen" class="w-full">
+        <div class="flex flex-col lg:flex-row xl:flex-row 2xl:flex-row lg:absolute md:absolute xl:absolute 2xl:absolute md:top-[450px] xl:top-[550px] 2xl:top-[550px] lg:top-[550px] mx-auto lacak">
             <!-- lacak paket -->
-            <div class="bg-white rounded-md w-[350px] lg:w-[373px] md:w-[373px] mb-[15px] h-[300px] md:h-[341px] lg:h-[341px] xl:h-[341px] 2xl:h-[341px] ml-[20px] md:ml-0 lg:ml-0 xl:ml-0 2xl:ml-0 mr-[20px]">
-                <div class="p-[20px]">
+            <div class="bg-white rounded-md w-[350px] lg:w-[373px] md:w-full mb-[15px] h-[300px] md:h-[341px] lg:h-[341px] xl:h-[341px] 2xl:h-[341px] lg:mr-[20px] md:mr-[20px] xl:mr-[20px] 2xl:mr-[20px]">
+                <div class="p-[20px] w-full">
                     <span class="text-[#2D71B4] font-[600] text-[16px] lg:text-[24px] md:text-[24px] xl:text-[24px] 2xl:text-[24px]">Lacak Paket Kuy</span>
                     <div class="flex flex-col ">
                         <label for="kodeResi" class="font-[600] my-[10px] text-[14px]">Kode Resi :</label>
@@ -75,11 +73,11 @@
             </div>
             
             <!-- cek ongkir -->
-            <div class=" bg-white rounded-md w-full xl:max-w-[960px] 2xl:max-w-[960px] lg:max-w-[860px] md:max-w-[860px] h-[341px]">
+            <div class=" bg-white rounded-md w-full xl:max-w-[960px] 2xl:max-w-[960px] lg:max-w-[860px] md:w-full h-[341px]">
                 <div class="bg-white rounded-md">
                     <div class="flex flex-col p-[20px] justify-around">
-                        <span class="text-[#2D71B4] font-[600] text-[24px] mb-[44px]">Cek Ongkir</span>
-                        <div class="flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row space-x-[18px]">
+                        <span class="text-[#2D71B4] font-[600] text-[16px] lg:text-[24px] md:text-[24px] xl:text-[24px] 2xl:text-[24px] mb-4 lg:mb-[44px] xl:mb-[44px] 2xl:mb-[44px]">Cek Ongkir</span>
+                        <div class="flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row ">
                             <input 
                                 type="text" 
                                 name="berat" 
@@ -95,16 +93,7 @@
                                         class="tujuan border border-[#606060] rounded-lg w-[239.031px] h-[50px]" 
                                         placeholder="Nama Kota">
                                 </div>
-                            <div class="flex flex-col">
-                                <div class="relative">
-                                    <img src="./assets/i-location-green.png" alt="icon-location-kuy" class="absolute icon w-[19px]">
-                                    <input 
-                                        type="text" 
-                                        name="tujuan" 
-                                        id="tujuan" 
-                                        class="tujuan border border-[#606060] rounded-lg w-[239.031px] h-[50px] mb-[14px]" 
-                                        placeholder="Nama Kota">
-                                    </div>
+                                <div class="flex flex-col">
                                     <div class="relative">
                                         <img src="./assets/i-location-green.png" alt="icon-location-kuy" class="absolute icon w-[19px]">
                                         <input 
@@ -112,21 +101,30 @@
                                             name="tujuan" 
                                             id="tujuan" 
                                             class="tujuan border border-[#606060] rounded-lg w-[239.031px] h-[50px] mb-[14px]" 
-                                            placeholder="Tambah Tujuan">
+                                            placeholder="Nama Kota">
                                         </div>
-                                <span class="text-[#5F5F5F] text-[12px] font-[500] flex justify-end mb-[25px] mt-[5px]">*Cek hingga 3 tujuan sekaligus</span>
-                            </div>
+                                        <div class="relative">
+                                            <img src="./assets/i-location-green.png" alt="icon-location-kuy" class="absolute icon w-[19px]">
+                                            <input 
+                                                type="text" 
+                                                name="tujuan" 
+                                                id="tujuan" 
+                                                class="tujuan border border-[#606060] rounded-lg w-[239.031px] h-[50px] mb-[14px]" 
+                                                placeholder="Tambah Tujuan">
+                                            </div>
+                                    <span class="text-[#5F5F5F] text-[12px] font-[500] flex justify-end mb-[25px] mt-[5px]">*Cek hingga 3 tujuan sekaligus</span>
+                                </div>
                         </div>
-                        <button class="bg-[#2D71B4] text-white font-[600] text-[18px] py-[12px] px-[100px] rounded-md">Cek Ongkir</button>
+                        <button class="bg-[#2D71B4] text-white font-[600] text-[14px] lg:text-[16px] md:text-[16px] xl:text-[16px] 2xl:text-[16px] py-[12px] lg:mt-[24px] xl:mt-[24px] md:mt-[24px] 2xl:mt-[24px] rounded-md">Cek Ongkir</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="flex flex-col md:flex-row xl:flex-row 2xl:flex-row lg:flex-row mb-[100px] mt-[200px] lg:mt-[400px] xl:mt-[400px] 2xl:mt-[400px] md:mt-[800px] justify-evenly mx-[80px]">
-        <div class="flex flex-col w-[350px]">
-            <span class="text-[#2D71B4] text-[30px] 2xl:text-[40px] xl:text-[40px] lg:text-[40px] md:text-[40px] font-[600]">Layanan Kita</span>
+    <div class="flex flex-col md:flex-row xl:flex-row 2xl:flex-row lg:flex-row mt-[120px] lg:mt-[400px] xl:mt-[350px] 2xl:mt-[300px] md:mt-[800px] lg:w-[1180px] mx-auto">
+        <div class="flex flex-col px-5 w-[373px]">
+            <span class="text-[#2D71B4] text-[25px] 2xl:text-[40px] xl:text-[40px] lg:text-[40px] md:text-[40px] font-[600]">Layanan Kita</span>
             <span class="text-[#5F5F5F] text-[17px] font-[400]">KUY reservasi dan kirim paketmu sekarang juga!</span>
 
             <div class="flex flex-col mt-4">
@@ -136,11 +134,10 @@
                 <button class="bg-[#079849] text-white rounded-md py-[12px] w-[85%] 2xl:w-full xl:w-full lg:w-full md:w-full">Whatsapp</button> 
             </div>
         </div>
-        
-        <div class="flex flex-col lg:ml-[40px] justify-center">
-            <div class="flex flex-col lg:flex-row mb-[20px] lg:space-x-4 md:space-x-4">
 
-                <div class="card bg-white flex flex-col max-w-[360px] p-[22px] rounded-md mt-4">
+        <div class="flex flex-col  px-5">
+            <div class="flex flex-col md:flex-col xl:flex-row 2xl:flex-row lg:flex-row">
+                <div class="bg-white rounded-md flex flex-col p-[20px] mt-4 shadow-md w-[320px] lg:w-[363px] md:w-[363px] xl:w-[363px] 2xl:w-[363px] mr-4">
                     <div class="flex flex-row">
                         <img src="./assets/i-sameday.png" alt="icon-sameday-kuy" class="w-[50px] h-[50px] mr-4">
                         <span class="text-[#4E4E4E] text-[30px] font-[600] mb-[12px]">Sameday</span>
@@ -149,8 +146,8 @@
                     <span class="text-[#5F5F5F] text-[16px] font-[500]">Mulai dari</span>
                     <span class="text-[#3375B8] text-[35px] font-[700]">Rp. 10.000</span>
                 </div>
-                
-                <div class="card bg-white flex flex-col max-w-[360px] p-[22px] rounded-md mt-4">
+    
+                <div class="bg-white rounded-md flex flex-col p-[20px] mt-4 shadow-md w-[320px] lg:w-[363px] md:w-[363px] xl:w-[363px] 2xl:w-[363px]">
                     <div class="flex flex-row">
                         <img src="./assets/i-nextday.png" alt="icon-nextday-kuy" class="w-[50px] h-[50px] mr-4">
                         <span class="text-[#4E4E4E] text-[30px] font-[600] mb-[12px]">Nextday</span>
@@ -159,10 +156,9 @@
                     <span class="text-[#5F5F5F] text-[16px] font-[500]">Mulai dari</span>
                     <span class="text-[#3375B8] text-[35px] font-[700]">Rp. 8.000 <a class="text-[24px] text-[#B83333]">/</a> <a class="text-[24px] text-[#B83333] line-through">10.000 </a></span>
                 </div>
-                
             </div>
 
-            <div class="card bg-white flex flex-col max-w-[360px] p-[22px] rounded-md">
+            <div class="bg-white rounded-md flex flex-col p-[20px] mt-4 shadow-md w-[320px] lg:w-[363px] md:w-[363px] xl:w-[363px] 2xl:w-[363px]">
                 <div class="flex flex-row">
                     <img src="./assets/i-medicine.png" alt="icon-medicine-kuy" class="w-[50px] h-[50px] mr-4">
                     <span class="text-[#4E4E4E] text-[30px] font-[600] mb-[12px]">Medicine</span>
@@ -176,33 +172,58 @@
         </div>
     </div>
 
-    <div class="bg-[#CAFFE9] flex w-full md:w-[900px] lg:w-[1100px] md:w-[1100px] xl:w-[1200px] 2xl:w-[1200px] items-center rounded-md md:ml-[20px] lg:ml-[80px] xl:ml-[80px] 2xl:ml-[80px] flex-col lg:flex-row">
+    <div class="py-5 lg:py-0 xl:py-0 2xl:py-0 md:py-0 bg-[#CAFFE9] mt-[100px] flex flex-col md:flex-row xl:flex-row 2xl:flex-row lg:flex-row items-center lg:w-[1140px] mx-auto rounded-lg">
         <img src="./assets/people2.png" alt="assets-kuy" class="w-[285px] h-[305px]">
 
         <div class="flex flex-col items-center">
             <span class="text-[#2D71B4] text-[38px] font-[700] text-center p-[10px]">Kuy Support Produk lokal</span>
             <span class="text-[18px] text-[#5F5F5F] font-[400] text-center mb-[30px] w-[75%] xl:w-full 2xl:w-full lg:w-full md:w-full">Mau produk kamu ditampilkan disini? atau dapat kan benefit lebih dengan join bersama kami</span>
-            <div class="flex">
+
+            <div class="flex flex-col md:flex-row xl:flex-row 2xl:flex-row lg:flex-row">
                 <button class="bg-[#2D71B4] text-white rounded-md text-[18px] font-[600] px-[16px] py-[12px] mr-[8px]">Tampilkan Produk Kamu</button>
-                <div class="flex bg-[#1CAD4E] text-white rounded-md text-[18px] font-[600] px-[16px] py-[12px]">
+
+                <div class="flex bg-[#1CAD4E] justify-center text-white rounded-md text-[18px] font-[600] px-[16px] py-[12px] mt-2 lg:mt-0 md:mt-0 xl:mt-0 2xl:mt-0">
                     <a href="#" class="mr-2">Join Mitra</a>
                     <img src="./assets/i-join-mitra.png" alt="icon-joint-mitra-kuy" class="w-[26.5px] h-[26.5px]">
                 </div>
             </div>
         </div>
 
-        <img src="./assets/people1.png" alt="assets-kuy" class="w-[285px] h-[305px]">
+        <img src="./assets/people1.png" alt="assets-kuy" class="w-[285px] h-[305px] hidden lg:block md:hidden xl:block 2xl:block">
     </div>
 
-    <div class="mb-[100px]">
+    <div class="mt-4">
         <div class="flex items-center justify-center my-[20px]">
             <a href="" class="text-[#0065C1] text-[20px] font-[600] mr-3">Kunjungi Etalase Kuy</a>
             <img src="./assets/i-arrow.png" alt="arrow-kuy" class="w-[1.875rem]">
         </div>
 
+        
         <div class="flex flex-wrap justify-center">
-            <div class="bg-white max-w-[360px] rounded-xl relative mr-[1.25rem] mb-4 ml-4">
-                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[360px] mb-[10px]">
+            <div class="bg-white w-[300px] lg:w-[360px] md:w-[360px] xl:w-[360px] 2xl:w-[360px] rounded-xl relative mr-[1.25rem] mb-4 ml-4">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="w-[300px] lg:w-[360px] md:w-[360px] xl:w-[360px] 2xl:w-[360px] mb-[10px]">
+                <div class="px-[10px]">
+                    <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
+                    <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
+                </div>
+                <div class="flex px-[10px] absolute detail">
+                    <a href="" class="text-[#0065C1] text-[16px] font-[400]">Lihat Detail</a>
+                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[1.5rem] h-[1.5rem]">
+                </div>
+            </div>
+            <div class="bg-white w-[300px] lg:w-[360px] md:w-[360px] xl:w-[360px] 2xl:w-[360px] rounded-xl relative mr-[1.25rem] mb-4 ml-4">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="w-[300px] lg:w-[360px] md:w-[360px] xl:w-[360px] 2xl:w-[360px] mb-[10px]">
+                <div class="px-[10px]">
+                    <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
+                    <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
+                </div>
+                <div class="flex px-[10px] absolute detail">
+                    <a href="" class="text-[#0065C1] text-[16px] font-[400]">Lihat Detail</a>
+                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[1.5rem] h-[1.5rem]">
+                </div>
+            </div>
+            <div class="bg-white w-[300px] lg:w-[360px] md:w-[360px] xl:w-[360px] 2xl:w-[360px] rounded-xl relative mr-[1.25rem] mb-4 ml-4">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="w-[300px] lg:w-[360px] md:w-[360px] xl:w-[360px] 2xl:w-[360px] mb-[10px]">
                 <div class="px-[10px]">
                     <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
                     <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
@@ -213,130 +234,113 @@
                 </div>
             </div>
 
-            <div class="bg-white max-w-[360px] rounded-xl relative xl:mr-[1.25rem] 2xl:mr-[1.25rem] lg:mr-[1.25rem] md:mr-[1.25rem] mb-4">
-                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[360px] mb-[10px]">
-                <div class="px-[10px]">
-                    <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
-                    <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
-                </div>
-                <div class="flex px-[10px] absolute detail">
-                    <a href="" class="text-[#0065C1] text-[16px] font-[400]">Lihat Detail</a>
-                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[1.5rem] h-[1.5rem]">
-                </div>
-            </div>
-
-            <div class="bg-white max-w-[360px] rounded-xl relative mb-4">
-                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[360px] mb-[10px]">
-                <div class="px-[10px]">
-                    <span class="text-[#4E4E4E] text-[20px] font-[700]">Cikutra Shop</span>
-                    <p class="text-[#5F5F5F] text-[16px] font-[400] mt-2 mb-4">Macam macam kaos polos dewasa , bikin style kamu makin kece</p>
-                </div>
-                <div class="flex px-[10px] absolute detail">
-                    <a href="" class="text-[#0065C1] text-[16px] font-[400]">Lihat Detail</a>
-                    <img src="./assets/i-arrow.png" alt="icon-arrow-kuy" class="w-[1.5rem] h-[1.5rem]">
-                </div>
-            </div>
         </div>
     </div>
 
-    <div class="flex flex-col xl:flex-row 2xl:flex-row lg:flex-row md:flex-row lg:justify-around md:justify-around mb-[30px]">
-        <div class="flex flex-col ml-[10px] w-[850px] p-6 lg:p-0 md:p-0">
+    <div class="lg:w-[1120px] justify-between mx-auto flex flex-col xl:flex-row 2xl:flex-row lg:flex-row md:flex-row md:p-6">
+        <div class="flex flex-col lg:w-[900px] p-6 lg:p-0 md:p-0">
             <span class="text-[#0065C1] text-[40px] font-[600] justify-start">Berita & Promo</span>
             <p class="text-[#5F5F5F] text-[18px] font-[400]">Nantikan update terbaru dari kami</p>
         </div>
 
         <div class="flex lg:items-end md:items-end px-6 lg:px-0 md:px-0">
-            <a href=""><p class="text-[#0065C1] text-[20px] font-[600] pl-3 lg:pl-0 md:pl-0">Lihat Semua</p></a>
+            <a href=""><p class="text-[#0065C1] text-[20px] font-[600]">Lihat Semua</p></a>
         </div>
     </div>
 
-    <div class="flex flex-wrap justify-center mb-[100px] px-7 xl:p-0 2xl:p-0 lg:p-0 md:p-0">
-        <div class="mr-[48px] mb-4">
-            <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="h-[19.462rem] md:h-[22.462rem] lg:h-[22.462rem] w-[3  3.12rem]">
-            <p class="text-[#5F5F5F] text-[16px] py-[10px]">12 Desember 2023</p>
-            <p class="text-[#4E4E4E] text-[30px] font-[600] lg:mb-[17.2px] md:mb-[17.2px] xl:mb-[17.2px] 2xl:mb-[17.2px]">CikutraOlshop</p>
-            <p class="text-[#5F5F5F] font-[400] text-[18px] max-w-[530px] mb-4">Macam macam kaos polos dewasa , bikin style kmau makin kece beuuddd</p>
-        </div>
-
-        <div class="flex flex-col ">
-            <div class="flex mb-[32px]">
-                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
-                <div class="flex flex-col ml-[5px] lg:ml-[16px] md:ml-16px[]">
-                    <p class="text-[#5F5F5F] text-[14px] lg:text-[16px] md:text-[16px]">12 Desember 2023</p>
-                    <p class="text-[#4E4E4E] text-[20px] font-[600] my-2">CikutraOlshop</p>
-                    <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[16px]">Macam macam kaos polos dewasa , bikin style ...</p>
-                </div>
+    <div class="lg:w-[1120px] mx-auto mt-[30px]">
+        <div class="flex flex-wrap justify-center mb-[100px] px-7 xl:p-0 2xl:p-0 lg:p-0 md:p-0">
+            <div class="mr-[48px] mb-4">
+                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="h-[16.462rem] md:h-[22.462rem] lg:h-[22.462rem] w-[33.12rem]">
+                <p class="text-[#5F5F5F] text-[16px] py-[10px]">12 Desember 2023</p>
+                <p class="text-[#4E4E4E] text-[30px] font-[600] lg:mb-[17.2px] md:mb-[17.2px] xl:mb-[17.2px] 2xl:mb-[17.2px]">CikutraOlshop</p>
+                <p class="text-[#5F5F5F] font-[400] text-[18px] max-w-[530px] mb-4">Macam macam kaos polos dewasa , bikin style kmau makin kece beuuddd</p>
             </div>
-
-            <div class="flex mb-[32px]">
-                                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
-                <div class="flex flex-col ml-[5px] lg:ml-[16px] md:ml-16px[]">
-                    <p class="text-[#5F5F5F] text-[14px] lg:text-[16px] md:text-[16px]">12 Desember 2023</p>
-                    <p class="text-[#4E4E4E] text-[20px] font-[600] my-2">CikutraOlshop</p>
-                    <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[16px]">Macam macam kaos polos dewasa , bikin style ...</p>
+    
+            <div class="flex flex-col ">
+                <div class="flex mb-[32px] flex-col md:flex-row xl:flex-row 2xl:flex-row lg:flex-row">
+                    <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
+                    <div class="flex flex-col ml-[5px] lg:ml-[16px] md:ml-16px[]">
+                        <p class="text-[#5F5F5F] text-[14px] lg:text-[16px] md:text-[16px]">12 Desember 2023</p>
+                        <p class="text-[#4E4E4E] text-[20px] font-[600] my-2">CikutraOlshop</p>
+                        <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[16px]">Macam macam kaos polos dewasa , bikin style ...</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="flex">
-                                <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
-                <div class="flex flex-col ml-[5px] lg:ml-[16px] md:ml-16px[]">
-                    <p class="text-[#5F5F5F] text-[14px] lg:text-[16px] md:text-[16px]">12 Desember 2023</p>
-                    <p class="text-[#4E4E4E] text-[20px] font-[600] my-2">CikutraOlshop</p>
-                    <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[16px]">Macam macam kaos polos dewasa , bikin style ...</p>
+    
+                <div class="flex mb-[32px] flex-col md:flex-row xl:flex-row 2xl:flex-row lg:flex-row">
+                                    <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
+                    <div class="flex flex-col ml-[5px] lg:ml-[16px] md:ml-16px[]">
+                        <p class="text-[#5F5F5F] text-[14px] lg:text-[16px] md:text-[16px]">12 Desember 2023</p>
+                        <p class="text-[#4E4E4E] text-[20px] font-[600] my-2">CikutraOlshop</p>
+                        <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[16px]">Macam macam kaos polos dewasa , bikin style ...</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col md:flex-row xl:flex-row 2xl:flex-row lg:flex-row">
+                                    <img src="./assets/etalase.jpeg" alt="etalase-kuy" class="max-w-[283px] max-h-[162px]">
+                    <div class="flex flex-col ml-[5px] lg:ml-[16px] md:ml-16px[]">
+                        <p class="text-[#5F5F5F] text-[14px] lg:text-[16px] md:text-[16px]">12 Desember 2023</p>
+                        <p class="text-[#4E4E4E] text-[20px] font-[600] my-2">CikutraOlshop</p>
+                        <p class="max-w-[283px] text-[#5F5F5F] font-[400] text-[16px]">Macam macam kaos polos dewasa , bikin style ...</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="flex flex-wrap mb-[100px] justify-center">
-        <div class="flex flex-col mr-[20px] mt-4 p-6 xl:p-0 2xl:p-0 lg:p-0 md:p-0">
+    <div class="flex flex-col md:flex-col xl:flex-row 2xl:flex-row lg:flex-row mt-[120px] lg:w-[1100px] mx-auto justify-center items-center">
+        <div class="flex flex-col mt-4 p-6 xl:p-0 2xl:p-0 lg:p-0 md:p-0 mx-auto">
             <p class="text-[#0065C1] text-[40px] font-[600]">Cari Tiket Bus & Travel?</p>
             <p class="max-w-[563px] text-[#5F5F5F] font-[400] text-[18px] mb-[20px]">Ada banyak pilihan shuttle/travel terbaik dengan rute terlengkap untuk teman perjalanan kamu</p>
             <button class="bg-[#2D71B4] text-white rounded-md text-[18px] font-[600] px-[16px] py-[12px] mr-[8px] max-w-[207px]">Kunjungi Sekarang</button>
         </div>
 
-        <div class="mt-4">
-            <img src="./assets/diskon.jpeg" alt="diskon-kuy" class="max-w-[420px] xl:max-w-[640px] 2xl:max-w-[640px] lg:max-w-[540.5px] md:max-w-[540.5px] h-[190px] rounded-md">
+        <div class="mt-4 mx-auto">
+            <img src="./assets/diskon.jpeg" alt="diskon-kuy" class="w-full p-5 md:p-0 lg:p-0 xl:p-0 2xl:p-0 xl:max-w-[640px] 2xl:max-w-[640px] lg:max-w-[540.5px] md:max-w-[565.5px] h-[190px] rounded-md">
         </div>
     </div>
 
-    <div class="bg-[#E2F7FC] flex flex-col xl:flex-row 2xl:flex-row lg:flex-row md:flex-row xl:flex-row 2xl:flex-row pl-[70px] xl:pl-0 2xl:pl-0 lg:pl-0 md:pl-0 md:justify-evenly lg:justify-evenly md:justify-evenly xl:justify-evenly 2xl:justify-evenly pt-[65px] pb-[50px]">
-        <div class="flex flex-wrap flex-col mr-[60px]">
-            <a href="./Landing-page.html"><img src="./assets/logo-footer.png" alt="logo-kuy" class="max-w-[285px]"></a>
-            <p class="text-black text-[18px] font-[600] mt-[20px]">Download aplikasinya di</p>
-            <img src="./assets/googleplaystore.png" alt="icon-google-lay-kuy" class="w-[229px] mt-2">
-        </div>
-        
-        <div class="flex flex-col flex-wrap mt-4 lg:mt-0 md:mt-0 xl:mt-0 2xl:mt-0">
-            <p class="text-black text-[18px] font-[600] pb-[10px] mb-[10px]">Lainnya</p>
-            <a href="" class="text-[#5F5F5F] mb-[10px]">Syarat dan Ketentuan</a>
-            <a href="" class="text-[#5F5F5F] mb-[10px]">Pusat Bantuan</a>
-            <a href="" class="text-[#5F5F5F] ">FAQ</a>
-        </div>
-
-        <div class="flex flex-col mt-4 lg:mt-0 md:mt-0 xl:mt-0 2xl:mt-0">
-            <p class="text-black text-[18px] font-[600] pb-[20px]">Informasi Kontak</p>
-            <div class="flex">
-                <img src="./assets/i-whatsapp.png" alt="icon-whatsapp-kuy" class="w-[23px] h-[23px] mr-[10px]">
-                <span class="text-[#5F5F5F]">0818-0400-4058</span>
+    <div class="bg-[#E2F7FC] flex flex-col xl:flex-row 2xl:flex-row lg:flex-row md:flex-row xl:flex-row 2xl:flex-row md:w-full lg:w-full mt-[140px] pt-[65px] pb-[50px]">
+        <div class="mx-auto flex flex-col xl:flex-row 2xl:flex-row lg:flex-row md:flex-row xl:flex-row 2xl:flex-row">
+            <div class="flex flex-wrap flex-col lg:mr-[60px]">
+                <a href="./Landing-page.html"><img src="./assets/logo-footer.png" alt="logo-kuy" class="max-w-[285px]"></a>
+                <p class="text-black text-[18px] font-[600] mt-[20px]">Download aplikasinya di</p>
+                <img src="./assets/googleplaystore.png" alt="icon-google-lay-kuy" class="w-[229px] mt-2">
             </div>
-        </div>
-
-        <div class="flex flex-col mt-4 lg:mt-0 md:mt-0 xl:mt-0 2xl:mt-0">
-            <p class="text-black text-[18px] font-[600] pb-[20px]">Sosial Media</p>
-            <div class="flex">
-                <a href="">
-                    <img src="./assets/i-instagram.png" alt="icon-instagram-kuy" class="w-[27px] mr-[4px]">
-                </a>
-                <a href="">
-                    <img src="./assets/i-facebook.png" alt="icon-facebook-kuy" class="w-[27px] mr-[4px]">
-                </a>
-                <a href="">
-                    <img src="./assets/i-twitter.png" alt="icon-twitter-kuy" class="w-[27px] mr-[4px]">
-                </a>
-                <a href="">
-                    <img src="./assets/i-youtube.png" alt="icon-youtube-kuy" class="w-[27px]">
-                </a>
+    
+            <div class="flex flex-col xl:flex-row 2xl:flex-row lg:flex-row md:flex-col xl:flex-row 2xl:flex-row">
+                        <div class="flex flex-col flex-wrap mt-4 lg:mt-0 md:mt-0 xl:mt-0 2xl:mt-0 mr-[60px]">
+                            <p class="text-black text-[18px] font-[600] pb-[10px] mb-[10px]">Lainnya</p>
+                            <a href="" class="text-[#5F5F5F] mb-[10px]">Syarat dan Ketentuan</a>
+                            <a href="" class="text-[#5F5F5F] mb-[10px]">Pusat Bantuan</a>
+                            <a href="" class="text-[#5F5F5F] ">FAQ</a>
+                        </div>
+                
+                        <div class="flex flex-col mt-4 lg:mt-0 md:mt-0 xl:mt-0 2xl:mt-0 mr-[60px]">
+                            <p class="text-black text-[18px] font-[600] pb-[20px]">Informasi Kontak</p>
+                            <div class="flex">
+                                <img src="./assets/i-whatsapp.png" alt="icon-whatsapp-kuy" class="w-[23px] h-[23px] mr-[10px]">
+                                <span class="text-[#5F5F5F]">0818-0400-4058</span>
+                            </div>
+                        </div>
+                
+                        <div class="flex flex-col mt-4 lg:mt-0 md:mt-0 xl:mt-0 2xl:mt-0 mr-8">
+                            <p class="text-black text-[18px] font-[600] pb-[20px]">Sosial Media</p>
+                            <div class="flex">
+                                <a href="">
+                                    <img src="./assets/i-instagram.png" alt="icon-instagram-kuy" class="w-[27px] mr-[4px]">
+                                </a>
+                                <a href="">
+                                    <img src="./assets/i-facebook.png" alt="icon-facebook-kuy" class="w-[27px] mr-[4px]">
+                                </a>
+                                <a href="">
+                                    <img src="./assets/i-twitter.png" alt="icon-twitter-kuy" class="w-[27px] mr-[4px]">
+                                </a>
+                                <a href="">
+                                    <img src="./assets/i-youtube.png" alt="icon-youtube-kuy" class="w-[27px]">
+                                </a>
+                            </div>
+                        </div>
             </div>
         </div>
     </div>
