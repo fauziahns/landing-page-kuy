@@ -11,7 +11,7 @@
     <title>LogIn</title>
 </head>
 <body>
-<div class="bg-[#F7F7F8]">
+<div class="bg-[#F7F7F8] w-full h-full">
     <!-- navbar -->    
     <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-evenly mx-auto p-4">
@@ -60,8 +60,8 @@
         </div>
     </nav>
 
-    <div class="flex justify-center justify-between flex-col md:flex-row lg:flex-row">
-        <div class="flex flex-col w-[347px] mt-[40px] lg:ml-[100px] md:ml-[90px] ml-[30px]">
+    <div class="flex justify-center justify-between flex-col md:flex-row lg:flex-row h-screen">
+        <div class="flex flex-col w-[347px] mt-[40px] w-[347px] mx-auto">
             <p class="text-[36px] font-[600]">Registrasi</p>
             <label for="nama" class="mt-[30px]">Nama</label>
             <input type="text" name="nama" id="nama" class="border border-[#ABABAB] rounded-md p-2 w-[355px] mb-[20px]" placeholder="Nama Anda">
@@ -77,7 +77,7 @@
             <input type="text" name="" id="" class="border border-[#ABABAB] rounded-md p-2 w-[355px] mb-[20px]">
 
             <label for="alamat">Alamat</label>
-            <textarea type="text" name="alamat" id="alamat" class="border border-[#ABABAB] rounded-md p-2 w-[355px] h-[88px]" placeholder="Nama Jalan"></textarea>
+            <textarea type="text" name="alamat" id="alamat" class="resize-none border border-[#ABABAB] rounded-md p-2 w-[355px] h-[88px]" placeholder="Nama Jalan"></textarea>
 
             <div class="flex justify-end">
                 <a href="./Profile.html">
@@ -87,7 +87,7 @@
         </div>
 
         <div class="">
-            <img src="./assets/register.png" alt="" class="h-[582px] hidden md:block lg:block">
+            <img src="./assets/register.png" alt="" class="h-full hidden md:block lg:block">
         </div>
     </div>
 </div>
